@@ -9,6 +9,36 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <meta-data android:name="com.snapchat.kit.sdk.clientId" android:value="bd520c48-fa70-47e7-993f-0d129cdbc069" />
+        <meta-data android:name="com.snapchat.kit.sdk.redirectUrl" android:value="snapevnt://auth" />
+        <meta-data android:name="com.snapchat.kit.sdk.scopes" android:resource="@array/snap_connect_scopes" /> <!-- This should be a string array of scopes !-->
+
+        <activity
+            android:name="com.snapchat.kit.sdk.SnapKitActivity"
+            android:launchMode="singleTask"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!--
+                    Enter the parts of your redirect url below
+                    e.g., if your redirect url is myapp://snap-kit/oauth2
+                        android:scheme="myapp"
+                        android:host="abc"
+                        android:path="/xy/z"
+                !-->
+                <data
+                    android:scheme="snapevnt"
+                    android:host="auth"
+                    android:path="/"
+                    />
+            </intent-filter>
+
+        </activity>
+
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action

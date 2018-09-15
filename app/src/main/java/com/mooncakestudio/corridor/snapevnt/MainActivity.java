@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.snapchat.kit.sdk.SnapLogin;
+
 public class MainActivity extends Activity {
 
     Button loginBtn;
@@ -16,15 +18,23 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        loginBtn = (Button) findViewById(R.id.loginBtn);
 
-        loginBtn.setOnClickListener(new View.OnClickListener() {
+        View yourView = findViewById(R.id.loginBtn);
+        yourView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent I = new Intent(MainActivity.this, MainGroups.class);
-                startActivity(I);
+                SnapLogin.getAuthTokenManager(this).startTokenGrant();
             }
         });
+//        loginBtn = (Button) findViewById(R.id.loginBtn);
+//
+//        loginBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent I = new Intent(MainActivity.this, MainGroups.class);
+//                startActivity(I);
+//            }
+//        });
 
     }
 }
