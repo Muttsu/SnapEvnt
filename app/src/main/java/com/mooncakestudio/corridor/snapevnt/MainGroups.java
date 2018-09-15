@@ -39,7 +39,7 @@ public class MainGroups extends Activity {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                        Intent myIntent = new Intent(view.getContext(), SignupActivity.class);
+                        Intent myIntent = new Intent(view.getContext(), ChatActivity.class);
                         startActivityForResult(myIntent, 0);
                         overridePendingTransition( R.anim.slide_in_right, R.anim.slide_out_left );
 
