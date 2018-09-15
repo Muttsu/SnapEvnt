@@ -118,8 +118,9 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true"
-            android:layout_marginBottom="67dp"
             android:background="@color/green"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
             android:text="Register"
             android:textColor="#ffffff"
             android:textSize="25sp" />
@@ -133,75 +134,6 @@
 
         </RadioGroup>
 
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:background= "@color/darkBlue">
-
-        <ImageView
-            android:id="@+id/logoutBarBtn"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginRight="20dp"
-            android:onClick="logoutBarOnClick"
-            android:paddingBottom="10dp"
-            android:paddingTop="10dp"
-            android:src="@drawable/exit" />
-
-        <ImageView
-            android:id="@+id/startTestBarBtn"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_toEndOf="@+id/viewProfileBarBtn"
-            android:layout_toStartOf="@id/logoutBarBtn"
-            android:onClick="startTestBarOnClick"
-            android:paddingBottom="10dp"
-            android:paddingTop="10dp"
-            android:src="@drawable/play" />
-
-        <ImageView
-            android:id="@+id/addPatientBarBtn"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="65dp"
-            android:layout_toEndOf="@id/homeBarBtn"
-            android:layout_toStartOf="@id/viewProfileBarBtn"
-            android:onClick="addPatientBarOnClick"
-            android:paddingBottom="10dp"
-            android:paddingTop="10dp"
-            android:src="@drawable/follow" />
-
-        <ImageView
-            android:id="@+id/viewProfileBarBtn"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:onClick="viewProfileOnClick"
-            android:paddingBottom="10dp"
-            android:paddingTop="10dp"
-            android:src="@drawable/avatar" />
-
-        <ImageView
-            android:id="@+id/homeBarBtn"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="20dp"
-            android:onClick="homeBarOnClick"
-            android:paddingBottom="10dp"
-            android:paddingTop="10dp"
-            android:src="@drawable/home" />
     </RelativeLayout>
 
 </RelativeLayout>
