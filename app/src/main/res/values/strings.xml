@@ -2,4 +2,8 @@
     <string name="app_name">SnapEvnt</string>
     <string name="me">Me</string>
 
+    <string-array name="SCSDKScopes">
+        <item>https://auth.snapchat.com/oauth2/api/user.display_name</item>
+        <item>https://auth.snapchat.com/oauth2/api/user.bitmoji.avatar</item>
+    </string-array>
 </resources>
