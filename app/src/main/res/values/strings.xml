@@ -1,7 +1,3 @@
 <resources>
     <string name="app_name">SnapEvnt</string>
-    <array name="snap_connect_scopes">
-        <string>https://auth.snapchat.com/oauth2/api/user.display_name</string>
-        <string>https://auth.snapchat.com/oauth2/api/user.bitmoji.avatar</string>
-    </array>
 </resources>

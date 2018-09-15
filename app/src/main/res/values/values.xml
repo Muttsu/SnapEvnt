@@ -1,2 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <array name="snap_connect_scopes">
+        <string>https://auth.snapchat.com/oauth2/api/user.display_name</string>
+        <string>https://auth.snapchat.com/oauth2/api/user.bitmoji.avatar</string>
+    </array>
+</resources>

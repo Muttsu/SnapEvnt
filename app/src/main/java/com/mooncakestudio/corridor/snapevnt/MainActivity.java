@@ -23,7 +23,7 @@ public class MainActivity extends Activity {
         yourView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SnapLogin.getAuthTokenManager(this).startTokenGrant();
+                SnapLogin.getAuthTokenManager(MainActivity.this).startTokenGrant();
             }
         });
 //        loginBtn = (Button) findViewById(R.id.loginBtn);
