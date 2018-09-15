@@ -60,7 +60,6 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatViewHolder
         public void bind(Message message) {
             TextView mAuthorTextView = (TextView) mChatView.findViewById(R.id.AuthorTextView);
             TextView mContentTextView = (TextView) mChatView.findViewById(R.id.ContentTextView);
-            mAuthorTextView.setText(message.getAuthorName());
             mContentTextView.setText(message.getContent());
         }
     }
@@ -74,7 +73,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatViewHolder
     @Override
     public int getItemViewType(int position) {
         Message m = mMessageData.get(position);
-        if (m.getAuthorId() == ((App)((Activity)mContext).getApplication()).getCurrentUser().getId()) {
+        if (m.getAuthorId().equals(((App)((Activity)mContext).getApplication()).getCurrentUser().getId())) {
             return SENT_MESSAGE_TYPE;
         } else {
             return RECV_MESSAGE_TYPE;
