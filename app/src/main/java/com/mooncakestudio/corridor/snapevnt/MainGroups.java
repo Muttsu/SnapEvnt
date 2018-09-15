@@ -25,7 +25,7 @@ public class MainGroups extends Activity {
         String[] listCount = new String[menu.length];
 
         for (int i = 0; i < menu.length; i++) {
-            listCount[i] = "" + (int) Math.floor(Math.random() * 5) + 1 ;
+            listCount[i] = "" + (int) (Math.floor(Math.random() * 5) + 1) ;
         }
 
         int [] menuImages={R.drawable.hacker,R.drawable.snap,R.drawable.party, R.drawable.school,R.drawable.family};
