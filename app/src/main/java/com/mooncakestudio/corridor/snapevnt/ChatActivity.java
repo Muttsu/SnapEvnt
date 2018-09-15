@@ -83,7 +83,6 @@ public class ChatActivity extends AppCompatActivity {
             }
         });
 
-        final DocumentReference docRef = db.collection("rooms").document("SF");
         db.collection("rooms").document("test_r0").collection("messages")
                 .orderBy("timestamp")
                 .limit(64)
