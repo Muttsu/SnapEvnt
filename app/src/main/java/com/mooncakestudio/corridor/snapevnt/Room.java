@@ -1,4 +1,5 @@
 package com.mooncakestudio.corridor.snapevnt;
 
-public class Room {
+class Room {
+    String id;
 }

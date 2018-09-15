@@ -8,50 +8,6 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1011804611215:android:5f976c97c284a01a",
-        "android_client_info": {
-          "package_name": "com.mooncakestudio.corridor"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "1011804611215-r3r3vso54l5ag0e45rlr0n7n3aih13s3.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.mooncakestudio.corridor",
-            "certificate_hash": "b03164f5f0e0915f40ce54cc679a4db2dfa0e37e"
-          }
-        },
-        {
-          "client_id": "1011804611215-65v1r8kor9fgdel4sd7rb7ophm1jpue4.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyCZRIRkQrv58sWgoIxsriyt0XFCYV8rpxY"
-        }
-      ],
-      "services": {
-        "analytics_service": {
-          "status": 1
-        },
-        "appinvite_service": {
-          "status": 2,
-          "other_platform_oauth_client": [
-            {
-              "client_id": "1011804611215-65v1r8kor9fgdel4sd7rb7ophm1jpue4.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        },
-        "ads_service": {
-          "status": 2
-        }
-      }
-    },
-    {
-      "client_info": {
         "mobilesdk_app_id": "1:1011804611215:android:038e29cfb86e2b68",
         "android_client_info": {
           "package_name": "com.mooncakestudio.corridor.snapevnt"
