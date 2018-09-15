@@ -8,7 +8,7 @@
     android:paddingBottom="45dp">
 
     <ImageView
-        android:id="@+id/groceryImg"
+        android:id="@+id/groupImg"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_alignParentLeft="true"
@@ -21,23 +21,23 @@
         app:srcCompat="@drawable/logo" />
 
     <TextView
-        android:id="@+id/groceryTxt"
+        android:id="@+id/groupTxt"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/groceryImg"
-        android:layout_alignTop="@+id/groceryImg"
-        android:layout_centerHorizontal="true"
+        android:layout_height="62dp"
+        android:layout_alignTop="@+id/groupImg"
+        android:layout_toEndOf="@+id/groupImg"
         android:gravity="center_vertical"
+        android:paddingLeft="20dp"
         android:text="TextView"
         android:textColor="#0e2f44"
-        android:textSize="30sp" />
+        android:textSize="20sp" />
 
     <TextView
-        android:id="@+id/listCountTxt"
+        android:id="@+id/msgCountTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/groceryTxt"
-        android:layout_alignTop="@+id/groceryTxt"
+        android:layout_alignBottom="@+id/groupTxt"
+        android:layout_alignTop="@+id/groupTxt"
         android:layout_marginEnd="21dp"
         android:layout_marginRight="21dp"
         android:layout_toLeftOf="@+id/imageView5"
@@ -53,9 +53,9 @@
         android:layout_height="20dp"
         android:layout_marginEnd="21dp"
         android:layout_marginRight="21dp"
-        app:srcCompat="@drawable/rightarrow"
+        android:src="@drawable/rightarrow"
         android:layout_marginBottom="19dp"
-        android:layout_alignBottom="@+id/groceryTxt"
+        android:layout_alignBottom="@+id/groupTxt"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
