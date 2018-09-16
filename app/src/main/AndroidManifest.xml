@@ -3,6 +3,7 @@
     package="com.mooncakestudio.corridor.snapevnt">
 
     <application
+
         android:name=".App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -26,5 +27,7 @@
             android:theme="@style/AppTheme" />
         <activity android:name=".ChatActivity"></activity>
     </application>
+
+    <uses-permission android:name="android.permission.CAMERA"> </uses-permission>
 
 </manifest>

@@ -1,5 +1,6 @@
 package com.mooncakestudio.corridor.snapevnt;
 
+import android.content.Intent;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.google.firebase.firestore.DocumentChange;
@@ -28,6 +30,7 @@ import java.util.List;
 public class ChatActivity extends AppCompatActivity {
 
     Button button_chatbox_send;
+    ImageButton cameraBtn;
 
     EditText edittext_chatbox;
 
@@ -46,6 +49,7 @@ public class ChatActivity extends AppCompatActivity {
         edittext_chatbox = (EditText) findViewById(R.id.edittext_chatbox);
 
         button_chatbox_send = (Button) findViewById(R.id.button_chatbox_send);
+        cameraBtn = (ImageButton) findViewById(R.id.cameraBtn);
         mRecyclerView = (RecyclerView) findViewById(R.id.MessageListView);
 
         mRecyclerView.setHasFixedSize(true);
@@ -80,6 +84,14 @@ public class ChatActivity extends AppCompatActivity {
                     toast.setGravity(Gravity.CENTER, 0, 0);
                     toast.show();
                 }
+            }
+        });
+
+        cameraBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent("MediaStore.ACTION_IMAGE_CAPTURE");
+                startActivity(intent);
             }
         });
 

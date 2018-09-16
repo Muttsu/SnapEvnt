@@ -6,15 +6,24 @@
     android:layout_height="match_parent"
     android:background="@color/yellow">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="101dp"
+        android:text="Login"
+        android:textColor="#000000"
+        android:textSize="45sp" />
+
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:id="@+id/skipBtn"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_centerInParent="true"
-        android:gravity="center_horizontal|top"
-        android:src="@drawable/snapchat"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp" />
+        android:onClick="skipLogin"
+        android:src="@drawable/snapevnt" />
 
     <Button
         android:id="@+id/loginBtn"
@@ -22,10 +31,8 @@
         android:layout_height="78dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
         android:background="@color/red"
+        android:onClick="logInClick"
         android:text="LET ME IN"
         android:textColor="#ffffff"
         android:textSize="20sp"
@@ -34,16 +41,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="101dp"
-        android:text="Login with"
-        android:textColor="#000000"
-        android:textSize="45sp" />
 
 </RelativeLayout>
