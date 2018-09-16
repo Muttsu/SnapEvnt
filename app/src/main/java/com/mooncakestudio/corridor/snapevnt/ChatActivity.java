@@ -28,6 +28,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Random;
 
 public class ChatActivity extends AppCompatActivity {
 
@@ -88,6 +89,26 @@ public class ChatActivity extends AppCompatActivity {
                     db.collection("rooms").document("test_r0")
                             .collection("messages").add(m);
 
+                    // AI PREDICTION
+                    Random r = new Random();
+                    int randint = Math.abs(r.nextInt()) % 5;
+
+                    if (randint == 0){
+                        pollBtn.setImageResource(R.drawable.pollglow);
+
+                    } else if (randint == 1){
+                        randomizerBtn.setImageResource(R.drawable.randomizerglow);
+
+                    } else if (randint == 2){
+                        calendarBtn.setImageResource(R.drawable.calendarglow);
+
+                    } else if (randint == 3){
+                        notificationBtn.setImageResource(R.drawable.notificationglow);
+                    }
+
+
+
+
                     edittext_chatbox.setText("");
                 } else{
                     Toast toast = Toast.makeText(getApplicationContext(), "Please enter a message", Toast.LENGTH_SHORT);
@@ -108,9 +129,8 @@ public class ChatActivity extends AppCompatActivity {
         pollBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                pollBtn.setImageResource(R.drawable.pollglow);
-                //Intent I = new Intent(ChatActivity.this, MainGroups.class);
-                //startActivity(I);
+                Intent I = new Intent(ChatActivity.this, PollActivity.class);
+                startActivity(I);
 
             }
         });
@@ -118,9 +138,8 @@ public class ChatActivity extends AppCompatActivity {
         randomizerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                randomizerBtn.setImageResource(R.drawable.randomizerglow);
-                //Intent I = new Intent(ChatActivity.this, MainGroups.class);
-                //startActivity(I);
+                Intent I = new Intent(ChatActivity.this, RandomizerActivity.class);
+                startActivity(I);
 
             }
         });
@@ -128,7 +147,6 @@ public class ChatActivity extends AppCompatActivity {
         calendarBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //calendarBtn.setImageResource(R.drawable.calendarglow);
                 Intent I = new Intent(ChatActivity.this, CalendarActivity.class);
                 startActivity(I);
 
@@ -138,7 +156,6 @@ public class ChatActivity extends AppCompatActivity {
         notificationBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //notificationBtn.setImageResource(R.drawable.notificationglow);
                 Intent I = new Intent(ChatActivity.this, NotificationsActivity.class);
                 startActivity(I);
 

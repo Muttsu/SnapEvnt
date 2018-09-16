@@ -18,7 +18,6 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 
 public class NotificationsActivity extends Activity {
 
@@ -41,8 +40,8 @@ public class NotificationsActivity extends Activity {
         notification.setAutoCancel(true);
 
         notificationsList = (ListView) findViewById(R.id.notificationsList);
-        addNotificationBtn = (Button) findViewById(R.id.addNotificationBtn);
-        notificationETxt = (EditText) findViewById(R.id.notificationETxt);
+        addNotificationBtn = (Button) findViewById(R.id.addChoiceBtn);
+        notificationETxt = (EditText) findViewById(R.id.choiceETxt);
 
         names.add("Dinner with friends [6:15 PM]");
         names.add("Movie night [8:00 PM]");

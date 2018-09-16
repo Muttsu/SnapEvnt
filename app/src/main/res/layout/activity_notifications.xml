@@ -8,7 +8,7 @@
     android:background="#F5DAAB">
 
     <EditText
-        android:id="@+id/notificationETxt"
+        android:id="@+id/choiceETxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -27,14 +27,14 @@
 
 
     <Button
-        android:id="@+id/addNotificationBtn"
+        android:id="@+id/addChoiceBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/notificationETxt"
+        android:layout_below="@+id/choiceETxt"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:layout_marginTop="21dp"
@@ -47,7 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/addNotificationBtn"
+        android:layout_below="@+id/addChoiceBtn"
         android:layout_marginTop="19dp" />
 
 </RelativeLayout>

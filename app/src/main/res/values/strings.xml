@@ -3,4 +3,6 @@
     <string name="me">Me</string>
     <string name="hintlogin">USERNAME</string>
     <string name="hintnotify">Notification title</string>
+    <string name="hintrandomize">Add item</string>
+    <string name="hintpoll">Add choice</string>
 </resources>
