@@ -2,12 +2,17 @@ package com.mooncakestudio.corridor.snapevnt;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+
+import com.firebase.ui.auth.AuthUI;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 
 public class MainGroups extends Activity {
 
@@ -40,7 +45,7 @@ public class MainGroups extends Activity {
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                         if (position == 5){
-
+                            signOut();
                         } else{
                             Intent myIntent = new Intent(view.getContext(), ChatActivity.class);
                             startActivityForResult(myIntent, 0);
@@ -51,6 +56,20 @@ public class MainGroups extends Activity {
                 }
         );
 
+
+
+    }
+    public void signOut() {
+        final MainActivity ma = new MainActivity();
+        // [START auth_fui_signout]
+        AuthUI.getInstance()
+                .signOut(this)
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    public void onComplete(@NonNull Task<Void> task) {
+                        finishActivity(123);
+                    }
+                });
+        // [END auth_fui_signout]
     }
 }
 

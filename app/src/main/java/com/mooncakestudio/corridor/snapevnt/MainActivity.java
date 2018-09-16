@@ -25,18 +25,7 @@ import java.util.List;
 
 public class MainActivity extends Activity {
 
-    private static final int RC_SIGN_IN = 123;
-
-    ImageView skipBtn;
-    Button loginBtn;
-    List<AuthUI.IdpConfig> providers = Arrays.asList(
-            new AuthUI.IdpConfig.GoogleBuilder().build());
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
+    public void refresh() {
         if (FirebaseAuth.getInstance().getCurrentUser() == null) {
             skipBtn = (ImageView) findViewById(R.id.skipBtn);
             loginBtn = (Button) findViewById(R.id.loginBtn);
@@ -58,6 +47,20 @@ public class MainActivity extends Activity {
             startActivity(I);
         }
 
+    }
+
+    private static final int RC_SIGN_IN = 123;
+
+    ImageView skipBtn;
+    Button loginBtn;
+    List<AuthUI.IdpConfig> providers = Arrays.asList(
+            new AuthUI.IdpConfig.GoogleBuilder().build());
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        refresh();
     }
 
     @Override
@@ -84,6 +87,7 @@ public class MainActivity extends Activity {
             }
         }
     }
+
 
     public void skipLogin(View view) {
         Toast toast = Toast.makeText(getApplicationContext(), "Skip login btn clicked", Toast.LENGTH_SHORT);
