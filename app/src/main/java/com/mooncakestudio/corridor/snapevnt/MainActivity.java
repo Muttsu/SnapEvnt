@@ -37,20 +37,26 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        skipBtn = (ImageView) findViewById(R.id.skipBtn);
-        loginBtn = (Button) findViewById(R.id.loginBtn);
+        if (FirebaseAuth.getInstance().getCurrentUser() == null) {
+            skipBtn = (ImageView) findViewById(R.id.skipBtn);
+            loginBtn = (Button) findViewById(R.id.loginBtn);
 
-        loginBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivityForResult(
-                        AuthUI.getInstance()
-                                .createSignInIntentBuilder()
-                                .setAvailableProviders(providers)
-                                .build(),
-                        RC_SIGN_IN);
-            }
-        });
+            loginBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    startActivityForResult(
+                            AuthUI.getInstance()
+                                    .createSignInIntentBuilder()
+                                    .setAvailableProviders(providers)
+                                    .build(),
+                            RC_SIGN_IN);
+                }
+            });
+        }
+        else {
+            Intent I = new Intent(MainActivity.this, MainGroups.class);
+            startActivity(I);
+        }
 
     }
 
