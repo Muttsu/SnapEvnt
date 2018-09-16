@@ -23,6 +23,14 @@
           }
         },
         {
+          "client_id": "1011804611215-i12lpho51asvj3ic554ov27ool6nm28c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mooncakestudio.corridor.snapevnt",
+            "certificate_hash": "b03164f5f0e0915f40ce54cc679a4db2dfa0e37e"
+          }
+        },
+        {
           "client_id": "1011804611215-65v1r8kor9fgdel4sd7rb7ophm1jpue4.apps.googleusercontent.com",
           "client_type": 3
         }
