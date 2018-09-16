@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/pollListLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#DCF2B9">
+
+    <EditText
+        android:id="@+id/choiceETxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp"
+        android:background="#DCF2B9"
+        android:ems="7"
+        android:gravity="center_horizontal"
+        android:hint="@string/hintpoll"
+        android:inputType="textPersonName"
+        android:maxLength="15"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:textColor="#003366"
+        android:textSize="30sp" />
+
+
+    <Button
+        android:id="@+id/addChoiceBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/choiceETxt"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="21dp"
+        android:background="@drawable/my_button_bg"
+        android:text="ADD CHOICE" />
+
+    <Button
+        android:id="@+id/submitChoiceBtn"
+        android:layout_width="384dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="167dp"
+        android:background="@drawable/my_button_bg"
+        android:text="SUBMIT" />
+
+    <ListView
+        android:id="@+id/choicesList"
+        android:layout_width="wrap_content"
+        android:layout_height="347dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
