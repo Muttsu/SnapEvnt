@@ -30,7 +30,7 @@ import java.util.List;
 public class ChatActivity extends AppCompatActivity {
 
     Button button_chatbox_send;
-    ImageButton cameraBtn;
+    ImageButton cameraBtn, pollBtn, randomizerBtn, calendarBtn, notificationBtn;
 
     EditText edittext_chatbox;
 
@@ -49,13 +49,21 @@ public class ChatActivity extends AppCompatActivity {
         edittext_chatbox = (EditText) findViewById(R.id.edittext_chatbox);
 
         button_chatbox_send = (Button) findViewById(R.id.button_chatbox_send);
+
         cameraBtn = (ImageButton) findViewById(R.id.cameraBtn);
+
+        pollBtn = (ImageButton) findViewById(R.id.pollBtn);
+        randomizerBtn = (ImageButton) findViewById(R.id.randomizerBtn);
+        calendarBtn = (ImageButton) findViewById(R.id.calendarBtn);
+        notificationBtn = (ImageButton) findViewById(R.id.notificationBtn);
+
         mRecyclerView = (RecyclerView) findViewById(R.id.MessageListView);
 
         mRecyclerView.setHasFixedSize(true);
 
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
+
 
         /*
         Message m0 = new Message("0",((App)getApplication()).getCurrentUser(),"hello world");
@@ -95,6 +103,46 @@ public class ChatActivity extends AppCompatActivity {
             }
         });
 
+        pollBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                pollBtn.setImageResource(R.drawable.pollglow);
+                //Intent I = new Intent(ChatActivity.this, MainGroups.class);
+                //startActivity(I);
+
+            }
+        });
+
+        randomizerBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                randomizerBtn.setImageResource(R.drawable.randomizerglow);
+                //Intent I = new Intent(ChatActivity.this, MainGroups.class);
+                //startActivity(I);
+
+            }
+        });
+
+        calendarBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                calendarBtn.setImageResource(R.drawable.calendarglow);
+                //Intent I = new Intent(ChatActivity.this, MainGroups.class);
+                //startActivity(I);
+
+            }
+        });
+
+        notificationBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //notificationBtn.setImageResource(R.drawable.notificationglow);
+                Intent I = new Intent(ChatActivity.this, NotificationsActivity.class);
+                startActivity(I);
+
+            }
+        });
+
         db.collection("rooms").document("test_r0").collection("messages")
                 .orderBy("timestamp")
                 .limit(64)
@@ -108,6 +156,7 @@ public class ChatActivity extends AppCompatActivity {
                         for (DocumentChange doc : value.getDocumentChanges()) {
                             mMessageData.add(doc.getNewIndex(), doc.getDocument().toObject(Message.class));
                             mAdapter.notifyItemInserted(doc.getNewIndex());
+                            mRecyclerView.smoothScrollToPosition(mAdapter.getItemCount()-1);
                         }
                     }
                 });
