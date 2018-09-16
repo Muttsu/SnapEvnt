@@ -126,9 +126,9 @@ public class ChatActivity extends AppCompatActivity {
         calendarBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                calendarBtn.setImageResource(R.drawable.calendarglow);
-                //Intent I = new Intent(ChatActivity.this, MainGroups.class);
-                //startActivity(I);
+                //calendarBtn.setImageResource(R.drawable.calendarglow);
+                Intent I = new Intent(ChatActivity.this, CalendarActivity.class);
+                startActivity(I);
 
             }
         });
