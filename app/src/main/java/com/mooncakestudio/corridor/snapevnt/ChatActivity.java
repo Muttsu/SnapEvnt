@@ -83,6 +83,12 @@ public class ChatActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String s = edittext_chatbox.getText().toString();
+
+                pollBtn.setImageResource(R.drawable.poll);
+                randomizerBtn.setImageResource(R.drawable.randomizer);
+                calendarBtn.setImageResource(R.drawable.calendar);
+                notificationBtn.setImageResource(R.drawable.notification);
+
                 if(!s.isEmpty() && s.length() > 0){
                     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                     Message m = new Message(new Date(), user.getUid(), user.getDisplayName(), s);
