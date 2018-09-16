@@ -20,7 +20,7 @@ public class MainGroups extends Activity {
 
         menuList = (ListView) findViewById(R.id.groupList);
 
-        String[] menu = {"HACKER TROUP", "SNAP FAM", "PARTY ANIMALS", "SCHOOL PROJECT", "FAMILY"};
+        String[] menu = {"HACKER TROUP", "SNAP FAM", "PARTY ANIMALS", "SCHOOL PROJECT", "FAMILY", "SIGN OUT"};
 
         String[] listCount = new String[menu.length];
 
@@ -28,7 +28,7 @@ public class MainGroups extends Activity {
             listCount[i] = "" + (int) (Math.floor(Math.random() * 5) + 1) ;
         }
 
-        int [] menuImages={R.drawable.hacker,R.drawable.snap,R.drawable.party, R.drawable.school,R.drawable.family};
+        int [] menuImages={R.drawable.hacker,R.drawable.snap,R.drawable.party, R.drawable.school,R.drawable.family, R.drawable.signout};
 
         ListAdapter myAdapter = new CustomAdapter(this, menu, listCount, menuImages);
 
@@ -39,9 +39,13 @@ public class MainGroups extends Activity {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                        Intent myIntent = new Intent(view.getContext(), ChatActivity.class);
-                        startActivityForResult(myIntent, 0);
-                        overridePendingTransition( R.anim.slide_in_right, R.anim.slide_out_left );
+                        if (position == 5){
+
+                        } else{
+                            Intent myIntent = new Intent(view.getContext(), ChatActivity.class);
+                            startActivityForResult(myIntent, 0);
+                            overridePendingTransition( R.anim.slide_in_right, R.anim.slide_out_left );
+                        }
 
                     }
                 }

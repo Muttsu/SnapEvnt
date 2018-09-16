@@ -23,6 +23,7 @@ public class CustomAdapter extends BaseAdapter{
             Color.parseColor("#81d8d0"),
             Color.parseColor("#ffffb2"),
             Color.parseColor("#ffd27f"),
+            Color.parseColor("#F02720"),
             /*Color.parseColor("#4cc1bb"),
             Color.parseColor("#9ee59e"),
             Color.parseColor("#81d8d0"),
