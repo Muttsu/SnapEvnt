@@ -28,13 +28,6 @@ public class MainActivity extends Activity {
     private static final int RC_SIGN_IN = 123;
 
     ImageView skipBtn;
-<<<<<<< Updated upstream
-    Button loginBtn
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        GoogleSignInActivity sa = new GoogleSignInActivity();
-=======
     Button loginBtn;
     List<AuthUI.IdpConfig> providers = Arrays.asList(
             new AuthUI.IdpConfig.GoogleBuilder().build());
@@ -71,7 +64,7 @@ public class MainActivity extends Activity {
             if (resultCode == RESULT_OK) {
                 // Successfully signed in
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                
+
                 // ...
                 Intent I = new Intent(MainActivity.this, MainGroups.class);
                 startActivity(I);
@@ -86,51 +79,9 @@ public class MainActivity extends Activity {
         }
     }
 
-    public void skipLogin(View view){
+    public void skipLogin(View view) {
         Toast toast = Toast.makeText(getApplicationContext(), "Skip login btn clicked", Toast.LENGTH_SHORT);
         toast.setGravity(Gravity.CENTER, 0, 0);
         toast.show();
->>>>>>> Stashed changes
     }
-//        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
-//        mFirebaseAuth = FirebaseAuth.getInstance();
-//        mFirebaseUser = mFirebaseAuth.getCurrentUser();
-//
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_main);
-//
-//        skipBtn = (ImageView) findViewById(R.id.skipBtn);
-//        loginBtn = (Button) findViewById(R.id.loginBtn);
-//
-//        loginBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                startActivity(new Intent(this, SignInActivity.class));
-//                finish();
-//                return;
-//                Intent I = new Intent(MainActivity.this, MainGroups.class);
-//                startActivity(I);
-//            }
-//        });
-//
-//        skipBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                skipLogin(MainActivity.super.getCurrentFocus());
-//            }
-//        });
-//
-//        if (mFirebaseUser == null) {
-//        } else {
-//            skipLogin(this.getCurrentFocus());
-//        }
-//
-//    }
-//
-//    public void skipLogin(View view){
-//        Toast toast = Toast.makeText(getApplicationContext(), "Skip login btn clicked", Toast.LENGTH_SHORT);
-//        toast.setGravity(Gravity.CENTER, 0, 0);
-//        toast.show();
-//    }
-//
 }

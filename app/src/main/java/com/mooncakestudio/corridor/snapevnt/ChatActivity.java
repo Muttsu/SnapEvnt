@@ -14,6 +14,8 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentChange;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -73,8 +75,8 @@ public class ChatActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String s = edittext_chatbox.getText().toString();
                 if(!s.isEmpty() && s.length() > 0){
-                    User u = ((App)getApplication()).getCurrentUser();
-                    Message m = new Message(new Date(), u.getId(), u.getName(), s);
+                    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                    Message m = new Message(new Date(), user.getUid(), user.getDisplayName(), s);
                     db.collection("rooms").document("test_r0")
                             .collection("messages").add(m);
 

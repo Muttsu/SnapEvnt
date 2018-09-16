@@ -10,6 +10,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
@@ -70,10 +73,12 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatViewHolder
         mMessageData = messageData;
     }
 
+    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
     @Override
     public int getItemViewType(int position) {
         Message m = mMessageData.get(position);
-        if (m.getAuthorId().equals(((App)((Activity)mContext).getApplication()).getCurrentUser().getId())) {
+        if (m.getAuthorId().equals(user.getUid())) {
             return SENT_MESSAGE_TYPE;
         } else {
             return RECV_MESSAGE_TYPE;
